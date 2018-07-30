@@ -21,11 +21,15 @@ app.use(function(req, res, next) {
 });
 
 
-
+var idleTimeoutSeconds = 1800;
 
 var session = require('express-session')
 app.use(session({
-  resave: false,
+  resave: true,
+    cookie: {
+    maxAge: idleTimeoutSeconds * 1000
+    },
+    rolling: true,
   saveUninitialized: true,
   secret: 'any string'
 }));
