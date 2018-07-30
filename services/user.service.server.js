@@ -19,9 +19,10 @@ module.exports = function (app) {
       .then(function(user) {
         if (user) {
             req.session['currentUser'] = user;
-        }
-        if (user.username === adminUsername) {
-            user.admin = true;
+            if (user.username === adminUsername) {
+                user.admin = true;
+            }
+            delete user.password;
         }
         res.json(user);
       })
@@ -56,6 +57,9 @@ module.exports = function (app) {
       var id = req.session['currentUser']._id;
       userModel.findUserById(id)
           .then(function (user) {
+              if (user.username === adminUsername) {
+                  user.admin = true;
+              }
               delete user.password;
               res.json(user);
           })

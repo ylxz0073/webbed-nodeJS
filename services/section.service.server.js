@@ -3,6 +3,7 @@ module.exports = function (app) {
     app.post('/api/course/:courseId/section', createSection);
     app.get('/api/course/:courseId/section', findSectionsForCourse);
     app.post('/api/section/:sectionId/enrollment', enrollStudentInSection);
+    app.delete('/api/section/:sectionId/enrollment', unenrollStudentFromSection);
     app.get('/api/student/section', findSectionsForStudent);
     app.put('/api/section/:sectionId', updateSection);
     app.delete('/api/section/:sectionId', deleteSection);
@@ -16,6 +17,7 @@ module.exports = function (app) {
         enrollmentModel
             .findSectionsForStudent(studentId)
             .then(function (enrollments) {
+                console.log(enrollments);
                 res.json(enrollments);
             });
     }
@@ -34,6 +36,26 @@ module.exports = function (app) {
             .then(function () {
                 return enrollmentModel
                     .enrollStudentInSection(enrollment)
+            })
+            .then(function (enrollment) {
+                res.json(enrollment);
+            })
+    }
+
+    function unenrollStudentFromSection(req, res) {
+        var sectionId = req.params.sectionId;
+        var currentUser = req.session.currentUser;
+        var studentId = currentUser._id;
+        var enrollment = {
+            student: studentId,
+            section: sectionId
+        };
+
+        sectionModel
+            .incrementSectionSeats(sectionId)
+            .then(function () {
+                return enrollmentModel
+                    .unenrollStudentFromSection(enrollment)
             })
             .then(function (enrollment) {
                 res.json(enrollment);
@@ -70,10 +92,13 @@ module.exports = function (app) {
 
     function deleteSection(req, res) {
         var sectionId = req.params.sectionId;
-        sectionModel
-            .deleteSection(sectionId)
-            .then(function (section) {
-                res.json(section);
-            })
+        enrollmentModel
+            .deleteEnrollmentForSection(sectionId)
+            .then(sectionModel
+                .deleteSection(sectionId)
+                .then(function (section) {
+                    res.json(section);
+                }))
+
     }
 };

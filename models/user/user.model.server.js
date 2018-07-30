@@ -26,13 +26,7 @@ function findAllUsers() {
 function updateUser(user) {
     return userModel.findOneAndUpdate(
         {_id: user._id},
-        {$set:
-                {username: user.username,
-                    firstName: user.firstName,
-                    lastName: user.lastName,
-                    email: user.email,
-                    sections: user.sections
-                }},
+        {$set: user},
         {new: true});
 }
 
