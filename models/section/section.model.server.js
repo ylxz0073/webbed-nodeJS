@@ -6,6 +6,13 @@ function createSection(section) {
   return sectionModel.create(section);
 }
 
+function updateSection(sectionId, section) {
+    return sectionModel.findOneAndUpdate(
+        {_id: sectionId},
+        {$set: section},
+        {new: true});
+}
+
 function findSectionsForCourse(courseId) {
   return sectionModel.find({courseId: courseId});
 }
@@ -26,9 +33,15 @@ function incrementSectionSeats(sectionId) {
   });
 }
 
+function deleteSection(sectionId) {
+  return sectionModel.remove({ _id: sectionId});
+}
+
 module.exports = {
   createSection: createSection,
   findSectionsForCourse: findSectionsForCourse,
   decrementSectionSeats: decrementSectionSeats,
-  incrementSectionSeats: incrementSectionSeats
+  incrementSectionSeats: incrementSectionSeats,
+  deleteSection: deleteSection,
+  updateSection: updateSection
 };

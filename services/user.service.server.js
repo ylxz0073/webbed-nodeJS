@@ -8,6 +8,8 @@ module.exports = function (app) {
   app.post('/api/login', login);
 
   var userModel = require('../models/user/user.model.server');
+  const adminUsername = 'admin';
+  const adminPassword = 'admin';
 
   function login(req, res) {
     var credentials = req.body;
@@ -17,6 +19,9 @@ module.exports = function (app) {
       .then(function(user) {
         if (user) {
             req.session['currentUser'] = user;
+        }
+        if (user.username === adminUsername) {
+            user.admin = true;
         }
         res.json(user);
       })
@@ -69,7 +74,7 @@ module.exports = function (app) {
                 userModel.createUser(newUser)
                     .then(function (user) {
                         req.session['currentUser'] = user;
-                        console.log(req.session['currentUser']);
+                        // console.log(req.session['currentUser']);
                         res.send(user);
                     })
             }

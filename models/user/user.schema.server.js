@@ -6,6 +6,7 @@ var userSchema = mongoose.Schema({
   firstName: String,
   lastName: String,
   email: String,
+  admin: Boolean,
   sections: [String]
 }, {collection: 'user'});
 
