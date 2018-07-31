@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb2feab5-5562-4fe1-bb6d-51bb67a08067" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/models/enrollment/enrollment.model.server.js" afterPath="$PROJECT_DIR$/models/enrollment/enrollment.model.server.js" />
       <change beforePath="$PROJECT_DIR$/models/user/user.model.server.js" afterPath="$PROJECT_DIR$/models/user/user.model.server.js" />
-      <change beforePath="$PROJECT_DIR$/models/user/user.schema.server.js" afterPath="$PROJECT_DIR$/models/user/user.schema.server.js" />
-      <change beforePath="$PROJECT_DIR$/services/section.service.server.js" afterPath="$PROJECT_DIR$/services/section.service.server.js" />
       <change beforePath="$PROJECT_DIR$/services/user.service.server.js" afterPath="$PROJECT_DIR$/services/user.service.server.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -24,8 +21,8 @@
       <file leaf-file-name="enrollment.model.server.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/enrollment/enrollment.model.server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="2" lean-forward="false" selection-start-line="30" selection-start-column="2" selection-end-line="30" selection-end-column="2" />
+            <state relative-caret-position="480">
+              <caret line="32" column="2" lean-forward="false" selection-start-line="32" selection-start-column="2" selection-end-line="32" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -44,8 +41,8 @@
       <file leaf-file-name="user.model.server.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/user/user.model.server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="13" column="57" lean-forward="true" selection-start-line="13" selection-start-column="57" selection-end-line="13" selection-end-column="57" />
+            <state relative-caret-position="255">
+              <caret line="17" column="27" lean-forward="true" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -54,8 +51,8 @@
       <file leaf-file-name="section.model.server.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/section/section.model.server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="36" column="48" lean-forward="true" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="48" />
+            <state relative-caret-position="645">
+              <caret line="43" column="2" lean-forward="false" selection-start-line="43" selection-start-column="2" selection-end-line="43" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -94,8 +91,8 @@
       <file leaf-file-name="user.service.server.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/services/user.service.server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="9" lean-forward="false" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+            <state relative-caret-position="238">
+              <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -104,8 +101,8 @@
       <file leaf-file-name="section.service.server.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/services/section.service.server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="845">
-              <caret line="100" column="19" lean-forward="true" selection-start-line="100" selection-start-column="19" selection-end-line="100" selection-end-column="19" />
+            <state relative-caret-position="360">
+              <caret line="27" column="40" lean-forward="true" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -132,10 +129,10 @@
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/models/section/section.model.server.js" />
         <option value="$PROJECT_DIR$/models/user/user.schema.server.js" />
-        <option value="$PROJECT_DIR$/models/user/user.model.server.js" />
         <option value="$PROJECT_DIR$/models/enrollment/enrollment.schema.server.js" />
-        <option value="$PROJECT_DIR$/models/enrollment/enrollment.model.server.js" />
         <option value="$PROJECT_DIR$/services/section.service.server.js" />
+        <option value="$PROJECT_DIR$/models/user/user.model.server.js" />
+        <option value="$PROJECT_DIR$/models/enrollment/enrollment.model.server.js" />
         <option value="$PROJECT_DIR$/services/user.service.server.js" />
       </list>
     </option>
@@ -157,11 +154,11 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="807" />
-    <option name="y" value="92" />
-    <option name="width" value="873" />
-    <option name="height" value="857" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="370" />
+    <option name="y" value="61" />
+    <option name="width" value="1069" />
+    <option name="height" value="880" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -261,18 +258,18 @@
       <option name="presentableId" value="Default" />
       <updated>1531180522978</updated>
       <workItem from="1531180524236" duration="8322000" />
-      <workItem from="1532302394916" duration="33341000" />
+      <workItem from="1532302394916" duration="42216000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41663000" />
+    <option name="totallyTimeSpent" value="50538000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="807" y="92" width="873" height="857" extended-state="0" />
+    <frame x="0" y="23" width="1680" height="959" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31220657" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16033755" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -399,14 +396,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/section/section.model.server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="36" column="48" lean-forward="true" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/enrollment/enrollment.schema.server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -415,18 +404,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/enrollment/enrollment.model.server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="2" lean-forward="false" selection-start-line="30" selection-start-column="2" selection-end-line="30" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/section/section.schema.server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="31" lean-forward="true" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/section.service.server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="27" column="40" lean-forward="true" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
           <folding />
         </state>
       </provider>
@@ -441,24 +430,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models/user/user.model.server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="13" column="57" lean-forward="true" selection-start-line="13" selection-start-column="57" selection-end-line="13" selection-end-column="57" />
+        <state relative-caret-position="255">
+          <caret line="17" column="27" lean-forward="true" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/services/section.service.server.js">
+    <entry file="file://$PROJECT_DIR$/models/enrollment/enrollment.model.server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="845">
-          <caret line="100" column="19" lean-forward="true" selection-start-line="100" selection-start-column="19" selection-end-line="100" selection-end-column="19" />
+        <state relative-caret-position="480">
+          <caret line="32" column="2" lean-forward="false" selection-start-line="32" selection-start-column="2" selection-end-line="32" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/section/section.model.server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="43" column="2" lean-forward="false" selection-start-line="43" selection-start-column="2" selection-end-line="43" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/services/user.service.server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="9" lean-forward="false" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+        <state relative-caret-position="238">
+          <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
           <folding />
         </state>
       </provider>

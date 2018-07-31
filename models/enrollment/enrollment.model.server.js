@@ -24,9 +24,14 @@ function deleteEnrollmentsForSection(section) {
     return enrollmentModel.remove({ section: section});
 }
 
+function deleteEnrollmentsForStudent(user) {
+    return enrollmentModel.remove({ student: user});
+}
+
 module.exports = {
   enrollStudentInSection: enrollStudentInSection,
   findSectionsForStudent: findSectionsForStudent,
   unenrollStudentFromSection: unenrollStudentFromSection,
-  deleteEnrollmentForSection: deleteEnrollmentsForSection
+  deleteEnrollmentForSection: deleteEnrollmentsForSection,
+  deleteEnrollmentsForStudent: deleteEnrollmentsForStudent
 };

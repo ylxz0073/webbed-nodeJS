@@ -6,8 +6,11 @@ module.exports = function (app) {
   app.get('/api/profile', profile);
   app.post('/api/logout', logout);
   app.post('/api/login', login);
+  app.delete('/api/profile', deleteUser);
 
   var userModel = require('../models/user/user.model.server');
+  var enrollmentModel = require('../models/enrollment/enrollment.model.server');
+  var sectionModel = require('../models/section/section.model.server');
   const adminUsername = 'admin';
   const adminPassword = 'admin';
 
@@ -53,16 +56,21 @@ module.exports = function (app) {
   }
 
   function profile(req, res) {
-    console.log(req.session['currentUser']);
-      var id = req.session['currentUser']._id;
-      userModel.findUserById(id)
-          .then(function (user) {
-              if (user.username === adminUsername) {
-                  user.admin = true;
-              }
-              delete user.password;
-              res.json(user);
-          })
+    console.log("profile" + req.session['currentUser']);
+      if (req.session['currentUser']) {
+          var id = req.session['currentUser']._id;
+          userModel.findUserById(id)
+              .then(function (user) {
+                  if (user.username === adminUsername) {
+                      user.admin = true;
+                  }
+                  delete user.password;
+                  res.json(user);
+              })
+      } else {
+          res.json(null);
+      }
+
     // res.send(req.session['currentUser']);
   }
 
@@ -83,6 +91,30 @@ module.exports = function (app) {
                     })
             }
         })
+  }
+
+  function deleteUser(req, res) {
+    var currentUser = req.session['currentUser'];
+
+    var userId = currentUser._id;
+
+    enrollmentModel.findSectionsForStudent(userId)
+        .then(function(sections){
+            console.log("section: " + sections);
+          sections.forEach( function(section) {
+            sectionModel.incrementSectionSeats(section.section._id).then(function(section){console.log("###" + section)});
+              });
+    }).then(function() {
+              return enrollmentModel.deleteEnrollmentsForStudent(currentUser);
+          })
+          .then(function() {
+              return userModel.deleteUser(userId);
+          })
+          .then(function(response)
+      {
+          req.session.destroy();
+          res.json(response);
+      });
   }
 
   function findAllUsers(req, res) {
