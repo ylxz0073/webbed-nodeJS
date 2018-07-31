@@ -1,7 +1,7 @@
 var express = require('express')
 var bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/webdev-summer1-2018-lectures');
+mongoose.connect(process.env.MONGODB_URI);
 
 
 var app = express()
@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin",
-    "http://localhost:4200");
+    "https://glacial-brushlands-65977.herokuapp.com");
   res.header("Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept");
   res.header("Access-Control-Allow-Methods",
@@ -73,4 +73,4 @@ userService(app);
 require('./services/section.service.server')(app);
 require('./services/quiz.service.server')(app);
 
-app.listen(4000);
+app.listen(process.env.PORT || 4000);
